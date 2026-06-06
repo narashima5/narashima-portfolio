@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
 
 export default function Navbar({ theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +17,8 @@ export default function Navbar({ theme, toggleTheme }) {
     <header className="header">
       <nav className="navbar container">
         <a href="#hero" className="logo" onClick={handleLinkClick}>
-          <span className="logo-accent">&lt;</span>Lakshmi Narashima<span class="logo-accent">.V /&gt;</span>
+          <img src={profileImg} alt="Lakshmi Narashima" className="logo-img" />
+          <span className="logo-accent">&lt;</span>Lakshmi Narashima<span className="logo-accent">.V /&gt;</span>
         </a>
 
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
